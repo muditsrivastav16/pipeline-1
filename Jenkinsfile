@@ -19,6 +19,11 @@ pipeline {
                 echo 'Building..'
             }
         }
+        stage('Build result') {
+            steps {
+                echo 'Build Successfull'
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
