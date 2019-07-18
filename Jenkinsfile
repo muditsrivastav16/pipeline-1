@@ -40,8 +40,8 @@ pipeline {
 node {
     checkout scm
 }
-*/
 
+--------------------------------------------------------------------
 pipeline {
     agent any
     stages {
@@ -53,3 +53,21 @@ pipeline {
         }
     }
 }
+--------------------------------------------------------------------
+
+*/
+
+
+pipeline {
+agent any
+       stages {
+           stage ('String') {
+               steps {
+                   def name = 'mudi'
+                   echo 'Hello ${name}'
+                    echo "hello ${name}"
+                }
+            }
+        }
+    }
+            
