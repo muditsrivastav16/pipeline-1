@@ -55,18 +55,34 @@ pipeline {
 }
 --------------------------------------------------------------------
 
-*/
+
 
 
 pipeline {
 agent any
        stages {
            stage ('String') {
+               def name = 'mudit'
                steps {
-                   def name = 'mudi'
+                  
                    echo 'Hello ${name}'
                     echo "hello ${name}"
                 }
             }
         }
     }            
+    
+    ----------------------------------------------------------
+    
+    */
+
+pipline {
+    agent any
+    stages {
+        stage ('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
+    }
+}
