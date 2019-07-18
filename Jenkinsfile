@@ -9,7 +9,7 @@ pipeline {
         }
     }
 }
-*/
+------------------------------------------------------
 pipeline {
     agent any
 
@@ -35,4 +35,9 @@ pipeline {
             }
         }
     }
+}
+*/
+
+node {
+    checkout scm
 }
