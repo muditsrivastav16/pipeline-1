@@ -20,11 +20,10 @@ pipeline {
 		}
 		stage ('setting maven') {
   			steps {
-    				maven {
-      					goals('clean package')
+    				//mavenGoals('clean package')
 	  				batchFile('mvn -Dmaven.test.failure.ignore=true install')
       					batchFile('echo Hello')
-    				}
+    				
   			}
 		}
 	}
