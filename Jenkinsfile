@@ -9,9 +9,6 @@ pipeline
         stage ('Test') {
             steps {
                 echo 'Test'
-                maven {
-                    goals ('clean package')
-                }
             }
         }
         stage ('Deploy') {
@@ -20,5 +17,4 @@ pipeline
             }
         }
     }
-}
-        
+}       
