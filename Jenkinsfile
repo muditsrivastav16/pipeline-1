@@ -1,4 +1,4 @@
-pipelinejob('DSL_Maven_pipeline') {
+pipelineJob('DSL_Maven_pipeline') {
                     scm {
                         git {
                             remote {
