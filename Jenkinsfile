@@ -5,12 +5,9 @@ pipeline {
 			steps {
 				job('DSL_Maven3') {
 					scm {
-    						git {
-      							remote {
-        							url 'https://github.com/muditsrivastav16/simple-java-maven-app.git'
-      							}
-      							branch 'master'
-    						}
+    						gitUrl 'https://github.com/muditsrivastav16/simple-java-maven-app.git'
+      						branch 'master'
+    						
   					}
   					triggers {
     						scm('* * * * *')
@@ -20,6 +17,8 @@ pipeline {
     					}
 				}
 			}
+		}
+		stage {
   			steps {
     				maven {
       					goals('clean package')
