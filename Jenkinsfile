@@ -4,7 +4,7 @@ pipeline {
         stage ('Build') {
             steps {
                 
-                job('DSL_Maven3') {
+                job('DSL_Maven_pipeline') {
                     scm {
                         git {
                             remote {
