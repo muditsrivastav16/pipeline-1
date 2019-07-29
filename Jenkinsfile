@@ -18,7 +18,7 @@ pipeline {
 				}
 			}
 		}
-		stage {
+		stage ('setting maven') {
   			steps {
     				maven {
       					goals('clean package')
