@@ -1,6 +1,4 @@
-pipeline {
-    
-    job('DSL_Maven_pipeline') {
+pipelinejob('DSL_Maven_pipeline') {
                     scm {
                         git {
                             remote {
@@ -16,7 +14,7 @@ pipeline {
                         mailer('2015pcecsmudit@poornima.org', true, true)
                     }
                     echo 'Build'
-                }
+                
     
     agent any
     stages {
