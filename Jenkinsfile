@@ -1,8 +1,7 @@
 pipeline {
 	agent any
 	
-	jobDsl {
-		job(\'DSL_Maven3\') {
+	jobDsl scriptText: '''job(\'DSL_Maven3\') {
   scm {
     git {
       remote {
@@ -25,8 +24,7 @@ pipeline {
       batchFile(\'echo Hello\')
     }
   }
-}
-		}
+}'''
 	
 	stages {
 		stage ('Build') {
