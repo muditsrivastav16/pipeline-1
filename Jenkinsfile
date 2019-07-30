@@ -1,7 +1,8 @@
 pipeline {
 	agent any
 	
-	job(\'DSL_Maven3\') {
+	jobDsl {
+		job(\'DSL_Maven3\') {
   scm {
     git {
       remote {
@@ -25,7 +26,7 @@ pipeline {
     }
   }
 }
-	
+		}
 	
 	stages {
 		stage ('Build') {
