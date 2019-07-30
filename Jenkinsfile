@@ -3,8 +3,12 @@ pipeline {
 	options {
 			timestamps() 
 		}
-	stages {
-		
+	
+	triggers {
+		corn('* * * * *')
+	}
+	
+	stages {		
 		stage ('createing job') {
 			steps {
 				echo 'creating job'
