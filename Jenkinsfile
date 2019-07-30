@@ -4,7 +4,14 @@ pipeline {
 		stage ('CreateJob') {
 			steps {
 				job('Maven_3') {
-					git ('https://github.com/muditsrivastav16/simple-java-maven-app.git')
+					scm {
+						git {
+							remote {
+								url 'https://github.com/muditsrivastav16/simple-java-maven-app.git'
+							}
+							branch 'master'
+						}
+					}
 				}
 				echo 'job created'
 			}
