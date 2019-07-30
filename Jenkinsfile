@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 
-	pipelinejob('DSL_Maven_3') {
+	pipelineJob('DSL_Maven_3') {
   	scm {
     	git ('https://github.com/muditsrivastav16/simple-java-maven-app.git', 'master')
   	}
