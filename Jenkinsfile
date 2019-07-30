@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	stages {
-		stage ('Create job') {			
+		stage ('Build') {			
 		
 			job('DSL_Maven_3') {
 				scm {
