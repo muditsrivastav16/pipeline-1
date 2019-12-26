@@ -2,14 +2,13 @@ pipeline {
 	agent {
 		node {
 			label 'master'
-			}
 		}
 	}
 	
 	stages {
 		stage ('Build') {
-		steps {
-			echo 'Build 1'
+			steps {
+				echo 'Build 1'
 			}
 		}
 	}
