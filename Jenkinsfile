@@ -8,7 +8,8 @@ pipeline {
 	stages {
 		stage ('Build') {
 			steps {
-				echo 'Build 3'
+				git([url: 'https://github.com/muditsrivastav16/Shared_Library.git', branch: 'master'])
+				echo 'Build "${BUILD_NUMBER}"'
 			}
 		}
 	}
